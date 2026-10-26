@@ -1,0 +1,2858 @@
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+
+    --orange: #EE8F00;
+    --teal: #0A4B4B;
+    --cream: #FFF9EE;
+    --white: #FFFFFF;
+    --black: #111111;
+    --muted: #6d6d6d;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Manrope', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--teal);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    background: rgba(255, 249, 238, 0.96);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+.navbar-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    min-height: 82px;
+
+    padding: 0 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-logo {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid var(--orange);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 23px;
+
+    color: var(--orange);
+
+}
+
+
+.brand-name {
+
+    color: var(--orange);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 18px;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 36px;
+
+}
+
+
+.nav-link {
+
+    font-size: 14px;
+
+    color: var(--orange);
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: var(--teal);
+
+}
+
+
+/* =====================================================
+   QUOTE BUTTON
+===================================================== */
+
+.quote-button {
+
+    background: var(--orange);
+
+    color: var(--white);
+
+    padding: 13px 25px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.quote-button:hover {
+
+    background: var(--teal);
+
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.mobile-menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: var(--orange);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+
+    display: none;
+
+    position: fixed;
+
+    top: 82px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: var(--cream);
+
+    z-index: 99;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+.mobile-menu.open {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.mobile-menu a {
+
+    color: var(--orange);
+
+    font-size: 15px;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 680px;
+
+    height: 86vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url('../images/herobg.png');
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.01);
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 20, 22, 0.78) 0%,
+            rgba(0, 20, 22, 0.55) 35%,
+            rgba(0, 20, 22, 0.12) 75%,
+            rgba(0, 20, 22, 0.04) 100%
+        );
+
+}
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1400px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 80px 78px 40px;
+
+    color: var(--white);
+
+}
+
+.hero-category {
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
+
+}
+
+.hero-category span {
+
+    margin: 0 8px;
+
+}
+
+.hero h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(60px, 6vw, 88px);
+
+    line-height: 0.91;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    max-width: 760px;
+
+    margin-bottom: 34px;
+
+}
+
+.hero-description {
+
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    color: rgba(255,255,255,0.82);
+
+    margin-bottom: 38px;
+
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: var(--orange);
+
+    color: var(--white);
+
+    padding: 16px 25px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+
+}
+
+.primary-button:hover {
+
+    background: var(--teal);
+
+}
+
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.55);
+
+    color: var(--white);
+
+    padding: 15px 26px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+
+}
+
+.secondary-button:hover {
+
+    background: var(--white);
+
+    color: var(--teal);
+
+}
+
+/* ==============================
+ABOUT US SECTION
+============================== */
+
+.about-section {
+width: 100%;
+padding: 65px 0 80px;
+background-color: #ffffff;
+}
+
+.section-container {
+width: 85%;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.about-label {
+color: #EE8F00;
+font-family: 'Manrope', sans-serif;
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 5px;
+margin-bottom: 25px;
+}
+
+/* Two-column layout */
+
+.about-grid {
+display: grid;
+grid-template-columns: 1.05fr 1fr;
+gap: 45px;
+align-items: stretch;
+}
+
+/* Left-side content */
+
+.about-content {
+min-width: 0;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+color: #444444;
+font-family: 'Manrope', sans-serif;
+font-size: 16px;
+line-height: 1.85;
+}
+
+/* About Us paragraph spacing */
+
+.about-intro p {
+margin: 0 0 18px;
+padding: 0;
+font-family: 'Manrope', sans-serif;
+font-size: 13px;
+line-height: 1.85;
+color: #444444;
+}
+
+.about-content strong {
+color: #EE8F00;
+font-weight: 500;
+}
+
+/* Vision section */
+
+.about-content h3 {
+margin: 0 0 4px;
+color: #EE8F00;
+font-family: 'Cormorant Garamond', serif;
+font-size: 25px;
+font-weight: 600;
+font-style: italic;
+line-height: 1.3;
+}
+
+.about-content .vision-text {
+margin: 0;
+font-size: 13px;
+line-height: 1.8;
+}
+
+.about-content hr {
+width: 100%;
+border: none;
+border-top: 1px solid #e4d8c6;
+margin: 35px 0 35px;
+}
+
+/* Interior, Exterior and Commercial services */
+
+.about-content .content-2 {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+width: 100%;
+align-items: start;
+margin-top: 0;
+}
+
+.about-content .content-2 > div {
+min-width: 0;
+text-align: left;
+}
+
+.about-content .content-2 h5 {
+margin: 0 0 4px;
+color: #0A4B4B;
+font-family: 'Cormorant Garamond', serif;
+font-size: 27px;
+font-weight: 500;
+line-height: 1.3;
+text-align: left;
+}
+
+.about-content .content-2 p {
+margin: 0;
+padding: 0;
+color: #222222;
+font-family: 'Manrope', sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.6;
+text-transform: uppercase;
+text-align: left;
+}
+
+/* Right-side image */
+
+.about-image {
+position: relative;
+min-width: 0;
+align-self: stretch;
+margin: 0 0 20px;
+}
+
+/* Orange outline behind the image */
+
+.about-image::before {
+content: "";
+position: absolute;
+top: 22px;
+right: 22px;
+bottom: -20px;
+left: -22px;
+border: 1px solid #EE8F00;
+z-index: 0;
+}
+
+/* Actual image */
+
+.about-image img {
+position: relative;
+z-index: 1;
+display: block;
+width: 100%;
+height: 100%;
+min-height: 480px;
+max-height: 650px;
+object-fit: cover;
+object-position: center;
+}
+
+/* ==============================
+PROMISE SECTION
+============================== */
+
+.promise-section {
+width: 100%;
+padding: 28px 20px 38px;
+margin: 0;
+background-color: #ffffff;
+text-align: center;
+box-sizing: border-box;
+}
+
+.promise-container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0;
+background: transparent;
+border: none;
+box-shadow: none;
+box-sizing: border-box;
+}
+
+.promise-container h4 {
+margin: 0 0 6px;
+color: #0A4B4B;
+font-family: 'Cormorant Garamond', serif;
+font-size: 30px;
+font-weight: 600;
+font-style: italic;
+line-height: 1.3;
+}
+
+.promise-container h2 {
+margin: 0;
+color: #EE8F00;
+font-family: 'Cormorant Garamond', serif;
+font-size: clamp(20px, 2.2vw, 31px);
+font-weight: 600;
+font-style: italic;
+line-height: 1.5;
+}
+
+.promise-container h2 span {
+color: #EE8F00;
+padding: 0 3px;
+}
+
+/* ==========================================
+   INTERIOR WORKS SECTION
+========================================== */
+
+.interior-section {
+    width: 100%;
+    padding: 85px 0 70px;
+    background: #fff8ed;
+    overflow: hidden;
+}
+
+.interior-container {
+    width: 88%;
+    max-width: 1460px;
+    margin: 0 auto;
+}
+
+/* Small orange label */
+
+.section-label {
+    margin-bottom: 25px;
+    color: #ee8f00;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Main heading */
+
+.section-title {
+    margin: 0 0 23px;
+    color: #252927;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 4vw, 54px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+/* Description */
+
+.section-description {
+    margin: 0 0 52px;
+    color: #66706f;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Four cards per row */
+
+.interior-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 50px;
+    row-gap: 68px;
+    align-items: stretch;
+}
+
+/* Individual card */
+
+.interior-card {
+    min-width: 0;
+    background: #fdfbf8;
+    box-shadow: 0 10px 24px rgba(49, 43, 32, 0.07);
+    overflow: hidden;
+
+    /* One-second hover transition */
+    transition:
+        transform 1s ease,
+        box-shadow 1s ease;
+}
+
+/* Move the card upwards */
+
+.interior-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 38px rgba(49, 43, 32, 0.16);
+}
+
+/* Image wrapper */
+
+.card-image {
+    width: 100%;
+    height: 245px;
+    overflow: hidden;
+    background: #eee6da;
+}
+
+/* Image zoom effect */
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 1s ease;
+}
+
+.interior-card:hover .card-image img {
+    transform: scale(1.07);
+}
+
+/* Card text area */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 198px;
+    padding: 27px 27px 25px;
+}
+
+/* Card heading */
+
+.card-content h3 {
+    margin: 0 0 12px;
+    color: #252927;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+/* Card description */
+
+.card-content p {
+    margin: 0 0 23px;
+    color: #626d6c;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* Enquire link */
+
+.enquire-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    color: #075453;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition:
+        color 1s ease,
+        gap 1s ease;
+}
+
+.enquire-link span {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 1s ease;
+}
+
+.interior-card:hover .enquire-link {
+    color: #ee8f00;
+    gap: 14px;
+}
+
+.interior-card:hover .enquire-link span {
+    transform: translate(3px, -3px);
+}
+
+/* Keyboard accessibility */
+
+.interior-card:focus-within {
+    outline: 2px solid #ee8f00;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   INTERIOR PROJECTS SHOWCASE
+========================================== */
+
+.projects-showcase {
+    width: 100%;
+    padding: 65px 0 90px;
+    background-color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+}
+
+.projects-container {
+    width: 96%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Section heading */
+
+.projects-heading {
+    margin-bottom: 72px;
+}
+
+.projects-label {
+    display: block;
+    margin-bottom: 20px;
+    color: #EE8F00;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.projects-heading h2 {
+    margin: 0 0 20px;
+    color: #202725;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.projects-heading p {
+    margin: 0;
+    color: #66716F;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Main asymmetric grid */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 344px 344px 344px;
+    gap: 20px;
+}
+
+/* Individual project card */
+
+.project-card {
+    position: relative;
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background-color: #e8e1d6;
+    color: #ffffff;
+    text-decoration: none;
+    isolation: isolate;
+}
+
+/* Project images */
+
+.project-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s ease;
+}
+
+/* Dark gradient at the bottom */
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(15, 22, 20, 0.78) 0%,
+        rgba(15, 22, 20, 0.30) 32%,
+        rgba(15, 22, 20, 0.02) 70%
+    );
+    transition: background 1s ease;
+}
+
+/* Card text */
+
+.project-overlay {
+    position: absolute;
+    z-index: 2;
+    right: 28px;
+    bottom: 28px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-number {
+    margin-bottom: 10px;
+    color: #F39800;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.project-overlay h3 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: transform 1s ease;
+}
+
+/* ==========================================
+   GRID PLACEMENT
+========================================== */
+
+/* 01 - Kitchen: large landscape card */
+.project-kitchen {
+    grid-column: 1 / 9;
+    grid-row: 1;
+}
+
+/* 02 - Living room: tall card on the right */
+.project-living {
+    grid-column: 9 / 13;
+    grid-row: 1 / 3;
+}
+
+/* 03 - Bedroom */
+.project-bedroom {
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+/* 04 - Wardrobe */
+.project-wardrobe {
+    grid-column: 5 / 9;
+    grid-row: 2;
+}
+
+/* 05 - TV unit */
+.project-tv {
+    grid-column: 1 / 5;
+    grid-row: 3;
+}
+
+/* 06 - False ceiling: wide landscape card */
+.project-ceiling {
+    grid-column: 5 / 13;
+    grid-row: 3;
+}
+
+/* ==========================================
+   HOVER EFFECT - 1 SECOND
+========================================== */
+
+.project-card:hover img {
+    transform: scale(1.07);
+}
+
+.project-card:hover::after {
+    background: linear-gradient(
+        to top,
+        rgba(15, 22, 20, 0.88) 0%,
+        rgba(15, 22, 20, 0.38) 42%,
+        rgba(15, 22, 20, 0.08) 100%
+    );
+}
+
+.project-card:hover .project-overlay h3 {
+    transform: translateY(-5px);
+}
+
+/* Keyboard accessibility */
+
+.project-card:focus-visible {
+    outline: 3px solid #EE8F00;
+    outline-offset: 4px;
+}
+
+
+.portfolio-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: #FFF9EE; 
+}
+
+/* ==========================================================================
+   Header Intro Text Typography Styles
+   ========================================================================== */
+.section-intro {
+  padding: 30px 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.tagline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #EE8F00; 
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.sub-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Layout Arrangement Grid Layout System 
+   ========================================================================== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px 50px;
+  gap: 15px;
+  justify-content: center; /* Aligns grid items symmetrically down the center */
+}
+
+.portfolio-card {
+  background-color: #ffffff;
+  border: 1px solid transparent; /* Invisible base border structural track */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(10, 75, 75, 0.03); 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Smooth transition cross-fade for shadows and border states */
+  transition: box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Image Cropping Window Layout Component */
+.card-media {
+  position: relative;
+  width: 100%;
+  padding-top: 72%; 
+  overflow: hidden;
+  background-color: #eae5dc;
+}
+
+.card-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Text Content Description Area Box */
+.card-body {
+  padding: 28px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures inner actions snap flush vertically */
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin-bottom: 12px; /* Static spacing below title */
+  transition: color 0.3s ease;
+}
+
+/* Updated permanent visibility layer container rules */
+.card-hover-content {
+  max-height: none;   /* Removed restriction constraints */
+  opacity: 1;         /* Permanently opaque text layout templates */
+  overflow: visible;
+  margin-top: 0;
+}
+
+.card-description {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.btn-enquire {
+  font-family: 'Manrope', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  color: #0A4B4B; 
+  transition: color 0.2s ease;
+}
+
+.btn-enquire .arrow {
+  font-size: 0.9rem;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   Updated Hover State Animations
+   ========================================================================== */
+.portfolio-card:hover {
+  box-shadow: 0 15px 35px rgba(10, 75, 75, 0.08);
+  border-color: #ee8f00; /* Smoothly apply Deep Teal border on focus hover */
+}
+
+/* Zooms behind crop mask seamlessly */
+.portfolio-card:hover .card-media img {
+  transform: scale(1.05);
+}
+
+/* Flips title color to vivid orange */
+.portfolio-card:hover .card-title {
+  color: #EE8F00;
+}
+
+/* Moves CTA link components details matching color style values */
+.portfolio-card:hover .btn-enquire {
+  color: #EE8F00;
+}
+
+.portfolio-card:hover .btn-enquire .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ==========================================
+   WHY CHOOSE US SECTION
+========================================== */
+
+.why-choose-section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* Section Header */
+
+.why-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.why-tagline {
+    display: block;
+    margin-bottom: 16px;
+    color: #EE8F00;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.why-main-heading {
+    margin: 0;
+    color: #1C1C1C;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Four-Column Grid */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Feature Card */
+
+.feature-card {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    padding: 45px 28px;
+    background-color: #FFF9EE;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    border: 1px solid #F0E7D9;
+
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* Number */
+
+.feature-card .feature-number {
+    display: block;
+    margin-bottom: 25px;
+    color: #EE8F00;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* Card Heading */
+
+.feature-card .feature-title {
+    margin: 0 0 18px;
+    color: #1C1C1C;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: color 0.4s ease;
+}
+
+/* Card Description */
+
+.feature-card .feature-description {
+    margin: 0;
+    color: #555555;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    transition: color 0.4s ease;
+}
+
+/* Default Highlight: Card 03 */
+
+.feature-card.active-card {
+    background-color: #0A4B4B;
+    box-shadow: 0 15px 40px rgba(10, 75, 75, 0.12);
+    z-index: 2;
+}
+
+.feature-card.active-card .feature-title {
+    color: #EE8F00;
+}
+
+.feature-card.active-card .feature-description {
+    color: #E2ECEC;
+}
+
+/* Hover: Highlight the Card Under the Mouse */
+
+.feature-card:hover {
+    background-color: #0A4B4B;
+    box-shadow: 0 15px 40px rgba(10, 75, 75, 0.12);
+    z-index: 3;
+    transform: translateY(-4px);
+}
+
+.feature-card:hover .feature-title {
+    color: #EE8F00;
+}
+
+.feature-card:hover .feature-description {
+    color: #E2ECEC;
+}
+
+/* Keep the Default Highlight When Not Hovering */
+
+.features-grid:hover .feature-card.active-card:not(:hover) {
+    background-color: #FFFFFF;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.features-grid:hover .feature-card.active-card:not(:hover) .feature-title {
+    color: #1C1C1C;
+}
+
+.features-grid:hover .feature-card.active-card:not(:hover) .feature-description {
+    color: #555555;
+}
+
+/* ==========================================================================
+   Our Process Main Section Wrapper Box Container 
+   ========================================================================== */
+.process-section {
+  background-color: #0A4B4B; /* Exact deep brand teal canvas background color from mockup */
+  padding: 100px 20px;
+  width: 100%;
+}
+
+.process-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header Intro Typography Block Details
+   ========================================================================== */
+.process-header {
+  margin-bottom: 80px;
+  text-align: left;
+}
+
+.process-tagline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #EE8F00; /* Vivid custom orange accent highlight tint */
+  font-weight: 700;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.process-main-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #FFF9EE; /* Warm design canvas off-white text contrast tint */
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   Horizontal Timeline Track & Grid Layout System
+   ========================================================================== */
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Balanced 5 columns layout path */
+  gap: 30px;
+  position: relative; /* Anchor tracking node coordinates */
+}
+
+/* Horizontal Connecting Vector Bar Line Rule Layer */
+.timeline-line {
+  position: absolute;
+  top: 18px; /* Perfectly centers behind the center cross axis of the 36px circular badges */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 249, 238, 0.25); /* Faint clean white connecting strand vector line */
+  z-index: 1;
+}
+
+/* Individual Columns Block Structures */
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2; /* Sits layered above the connecting rule vector bar lines */
+}
+
+/* Circular Node Counters Styling */
+.step-badge-node {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #0A4B4B; /* Matches base background seamlessly */
+  border: 1px solid #EE8F00; /* Pure orange outline circle boundary line layout */
+  color: #EE8F00;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Content Details Alignment Blocks Group */
+.step-body {
+  text-align: left;
+}
+
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFF9EE;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.step-description {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 249, 238, 0.7); /* Slightly translucent off-white for reading hierarchy readability layout */
+  max-width: 220px; /* Restricts descriptions to keep grid blocks looking organized */
+}
+
+/* ==========================================================================
+   Micro Interactions Hover Fluid Transformations (Optional Feature)
+   ========================================================================== */
+.timeline-step:hover .step-badge-node {
+  background-color: #EE8F00; /* Fills circular node with orange completely on hover interaction */
+  color: #0A4B4B;
+}
+
+.projects-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #FFF9EE; /* Main section backing canvas color match */
+}
+
+.projects-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Header Titles and Horizontal Filter Segment Layout Area Styles
+   ========================================================================== */
+.projects-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.projects-tagline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #EE8F00; /* Vivid design orange color highlight */
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.projects-main-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  line-height: 1.2;
+}
+
+/* Horizontal Action Filters Navigation Bar Layout Box */
+.filter-controls-group {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-btn {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  background-color: #ffffff;
+  color: #1C1C1C;
+  border: 1px solid #e0decb;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #0A4B4B;
+  color: #0A4B4B;
+}
+
+/* Active Highlight Filter State (Matches Dark Teal 'ALL' block selection) */
+.filter-btn.active-filter {
+  background-color: #0A4B4B; /* Core branding deep teal color tone */
+  border-color: #0A4B4B;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Portfolio Cards Grid Setup Container Layout 
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Card Block Structures with Explicit 1-Second Easing Animation
+   ========================================================================== */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(10, 75, 75, 0.02);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  
+  /* Mandatory explicit 1-second transition easing track */
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Media Box Cropper Frame */
+.project-media-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 72%; /* Clean uniform landscape layout display template frames */
+  overflow: hidden;
+  background-color: #f2ebd9;
+}
+
+.project-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Text Content Description Area Box */
+.project-body {
+  padding: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.project-category {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #EE8F00; /* Stays orange accent */
+  font-weight: 700;
+}
+
+.project-arrow-icon {
+  font-size: 0.95rem;
+  color: #EE8F00;
+  transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin-bottom: 6px;
+  transition: color 1.0s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-tag-type {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  color: #777777;
+}
+
+/* ==========================================================================
+   Hover Interaction Rules (Smoothly Executed Over exactly 1 Second)
+   ========================================================================== */
+.project-card:hover {
+  transform: translateY(-8px); /* Cards lift upwards gracefully over 1s */
+  box-shadow: 0 20px 40px rgba(10, 75, 75, 0.08); /* Deepens drop shadow depth */
+}
+
+/* Subtly zooms the graphic backdrop over 1s */
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Title text changes to orange over 1s */
+.project-card:hover .project-title {
+  color: #EE8F00;
+}
+
+/* Core micro action diagonal indicator displacement shifts over 1s */
+.project-card:hover .project-arrow-icon {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================
+   INTERIOR PROJECTS SHOWCASE
+   Section: <section id="projects">
+   ========================================== */
+
+#projects.projects-showcase {
+    width: 100%;
+    padding: 75px 0 90px;
+    background: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    overflow: hidden;
+    scroll-margin-top: 90px;
+}
+
+#projects .projects-container {
+    width: min(92%, 1400px);
+    margin: 0 auto;
+}
+
+/* Section heading */
+
+#projects .projects-heading {
+    margin-bottom: 40px;
+}
+
+#projects .projects-label {
+    display: block;
+    margin-bottom: 14px;
+    color: #EE8F00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#projects .projects-heading h2 {
+    margin: 0 0 14px;
+    color: #202725;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+#projects .projects-heading p {
+    margin: 0;
+    color: #66716F;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Asymmetric 12-column showcase grid */
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 300px 260px 300px;
+    gap: 18px;
+    width: 100%;
+}
+
+/* Individual showcase cards */
+
+#projects .project-card {
+    position: relative;
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #e8e1d6;
+    color: #ffffff;
+    text-decoration: none;
+    isolation: isolate;
+    border-radius: 2px;
+}
+
+/* Images */
+
+#projects .project-card > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s ease;
+}
+
+/* Bottom gradient for readable text */
+
+#projects .project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(15, 22, 20, 0.82) 0%,
+        rgba(15, 22, 20, 0.28) 38%,
+        rgba(15, 22, 20, 0.02) 75%
+    );
+    transition: background 1s ease;
+    pointer-events: none;
+}
+
+/* Text overlay */
+
+#projects .project-overlay {
+    position: absolute;
+    z-index: 2;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#projects .project-number {
+    margin-bottom: 8px;
+    color: #F39800;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#projects .project-overlay h3 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(23px, 2.5vw, 34px);
+    font-weight: 500;
+    line-height: 1.2;
+    transition: transform 1s ease;
+}
+
+/* Asymmetric card placement */
+
+#projects .project-kitchen {
+    grid-column: 1 / 9;
+    grid-row: 1;
+}
+
+#projects .project-living {
+    grid-column: 9 / 13;
+    grid-row: 1 / 3;
+}
+
+#projects .project-bedroom {
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+#projects .project-wardrobe {
+    grid-column: 5 / 9;
+    grid-row: 2;
+}
+
+#projects .project-tv {
+    grid-column: 1 / 5;
+    grid-row: 3;
+}
+
+#projects .project-ceiling {
+    grid-column: 5 / 13;
+    grid-row: 3;
+}
+
+/* Hover effect */
+
+#projects .project-card:hover > img {
+    transform: scale(1.06);
+}
+
+#projects .project-card:hover::after {
+    background: linear-gradient(
+        to top,
+        rgba(15, 22, 20, 0.90) 0%,
+        rgba(15, 22, 20, 0.40) 45%,
+        rgba(15, 22, 20, 0.08) 100%
+    );
+}
+
+#projects .project-card:hover .project-overlay h3 {
+    transform: translateY(-5px);
+}
+
+/* Keyboard accessibility */
+
+#projects .project-card:focus-visible {
+    outline: 3px solid #EE8F00;
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   CLASSIC COMFORT - PORTFOLIO PROJECTS
+   Fixed: Hidden Residential Line & Content Layout Overlap Fixes
+========================================================================== */
+
+#portfolio {
+    width: 100%;
+    height: auto;
+    padding: 80px 6.5%;
+    box-sizing: border-box;
+    background-color: #FFF9EE !important; /* Thematic cream background canvas setup rules */
+    overflow: visible;
+}
+
+/* Projects grid - Refactored to completely resolve overlapping grid components row flows */
+#portfolio .projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 48px 32px !important; /* 48px Row spacing and 32px Column gaps */
+    align-items: stretch !important; /* Equal height card normalization tracking rules */
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* Individual project card wrapper container */
+#portfolio .project-card .project-body {
+    position: relative !important;
+    inset: auto !important; /* Strips all hidden overlay positioning tracks */
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important; /* Automatically expands text panels columns height down row scales */
+    gap: 4px !important;
+    padding: 20px 24px 24px 24px !important; /* Compact balanced breathing interior pad dimensions */
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important; /* Crisp flat white body layer background color */
+    color: #1C1C1C !important;
+    overflow: visible !important;
+}
+
+/* Project image window crop frame box */
+#portfolio .project-card .project-media-wrapper {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    padding-top: 75% !important; /* Exact 4:3 landscape structural image aspect crop template */
+    margin: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+}
+
+#portfolio .project-card .project-media-wrapper img {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Project details / Card body block layer position underneath the image window frame */
+#portfolio .project-card .project-body {
+    position: relative !important;
+    inset: auto !important; /* Strips all hidden overlay positioning tracks */
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important; /* Automatically expands text panels columns height down row scales */
+    gap: 4px !important;
+    padding: 20px 24px 24px 24px !important; /* Compact balanced breathing interior pad dimensions */
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important; /* Crisp flat white body layer background color */
+    color: #1C1C1C !important;
+    overflow: visible !important;
+}
+
+/* Metadata Category Line Row Layout */
+#portfolio .project-card .project-body .card-meta-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+}
+
+/* Project category uppercase tag typography element rules */
+#portfolio .project-card .project-category {
+    font-family: 'Manrope', sans-serif !important;
+    color: #ee8f00 !important; /* Vibrant brand identity orange highlight tint */
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Diagonal arrow tracking node icon asset styling */
+#portfolio .project-card .project-body .project-arrow-icon {
+    font-size: 0.9rem !important;
+    color: #ee8f00 !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+    transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Project title line layout typography - Cormorant Garamond */
+#portfolio .project-card .project-body h3,
+#portfolio .project-card .project-title {
+    display: block !important;
+    position: relative !important;
+    font-family: "Cormorant Garamond", serif !important;
+    font-size: 1.65rem !important;
+    font-weight: 500 !important;
+    color: #0a4b4b !important; /* Primary signature deep teal text tint */
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    transition: color 1.0s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Fixed: Residential Line / Project type descriptor parameters label */
+#portfolio .project-card .project-tag-type,
+#portfolio .project-card .project-type {
+    display: block !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: #777777 !important; /* Legible muted slate grey visibility layer tracking rules */
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Project description block elements fallback configuration overrides */
+#portfolio .project-card .project-description,
+#portfolio .project-card .project-body p {
+    display: block !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    color: #555555 !important;
+    line-height: 1.6 !important;
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    overflow: visible !important;
+}
+
+/* ==========================================================================
+   Preserved Interactive 1-Second Hover State Transform Tracks
+   ========================================================================== */
+#portfolio .projects-grid .project-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 35px rgba(10, 75, 75, 0.08) !important;
+}
+
+#portfolio .projects-grid .project-card:hover .project-img {
+    transform: scale(1.04) !important;
+}
+
+/* Flips title color to theme accent orange smoothly over 1s */
+#portfolio .projects-grid .project-card:hover .project-title {
+    color: #ee8f00 !important; 
+}
+
+#portfolio .projects-grid .project-card:hover .project-arrow-icon {
+    transform: translate(3px, -3px) !important;
+}
+
+.no-projects-message {
+    font-family: 'Manrope', sans-serif;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #777777;
+}
+
+/* ==============================
+   TESTIMONIALS SECTION
+================================ */
+
+.testimonials-section {
+    width: 100%;
+    padding: 42px 0 42px;
+    background-color: #FFF9EE;
+    color: #202624;
+}
+
+.testimonials-container {
+    width: min(100% - 80px, 1390px);
+    margin: 0 auto;
+}
+
+/* Section Heading */
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 25px;
+    color: #EE8F00;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+
+.testimonials-header h2 {
+    margin: 0;
+    color: #202624;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+/* Cards Grid */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+/* Individual Card */
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px 33px 33px;
+    background-color: white;
+    box-shadow: 0 12px 35px rgba(30, 35, 30, 0.08);
+    box-sizing: border-box;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(30, 35, 30, 0.12);
+}
+
+/* Quotation Icon */
+
+.quote-icon {
+    margin-bottom: 27px;
+    color: #EE8F00;
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Testimonial Text */
+
+.testimonial-text {
+    margin: 0 0 36px;
+    color: #303532;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Divider */
+
+.testimonial-divider {
+    width: 100%;
+    height: 1px;
+    margin-top: auto;
+    margin-bottom: 25px;
+    background-color: #DCD4C7;
+    flex-shrink: 0;
+}
+
+/* Author Details */
+
+.testimonial-author h3 {
+    margin: 0 0 4px;
+    color: #202624;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.testimonial-author span {
+    display: block;
+    color: #69716F;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* ==============================
+   TESTIMONIALS SECTION
+================================ */
+
+.testimonials-section {
+    width: 100%;
+    padding: 42px 0 42px;
+    background-color: #FFF9EE;
+    color: #202624;
+}
+
+.testimonials-container {
+    width: min(100% - 80px, 1390px);
+    margin: 0 auto;
+}
+
+/* Section Heading */
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 25px;
+    color: #EE8F00;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+
+.testimonials-header h2 {
+    margin: 0;
+    color: #202624;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+/* Cards Grid */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+/* Individual Card */
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 38px 36px 36px;
+    background-color: #FFFFFF;
+    box-shadow: 0 12px 35px rgba(30, 35, 30, 0.08);
+    box-sizing: border-box;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(30, 35, 30, 0.12);
+}
+
+/* Quotation Icon */
+
+.quote-icon {
+    margin-bottom: 27px;
+    color: #EE8F00;
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Testimonial Text */
+
+.testimonial-text {
+    margin: 0 0 36px;
+    color: #303532;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Divider */
+
+.testimonial-divider {
+    width: 100%;
+    height: 1px;
+    margin-top: auto;
+    margin-bottom: 25px;
+    background-color: #DCD4C7;
+    flex-shrink: 0;
+}
+
+/* Author Details */
+
+.testimonial-author h3 {
+    margin: 0 0 4px;
+    color: #202624;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.testimonial-author span {
+    display: block;
+    color: #69716F;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Intro Banner Section Main Graphic Wrapper Window Frame Box
+   ========================================================================== */
+.intro-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh; /* Adjust view window framework depth to fit comfortably below navigation header rows */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  
+  /* System Background setup using high definition architectural reference assets */
+  background-image: url('../images/tvunit.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Dark Shading Visual Screen Shield Layer Template */
+.intro-banner-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 24, 24, 0.45); /* Blends matching tint shade to lock high contrast parity text metrics */
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Central Text Overlay Card Holder Box Styling
+   ========================================================================== */
+.intro-banner-content-card {
+  position: relative;
+  z-index: 2; /* Forces wrapper layer above background shield mesh surfaces */
+  max-width: 920px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 8px;
+  
+  /* Glassmorphism subtle layout structure styles */
+  background: rgba(10, 75, 75, 0.15); 
+}
+
+/* ==========================================================================
+   Typography Element Architecture Rules
+   ========================================================================== */
+.intro-banner-tagline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #EE8F00; /* Pure vivid orange accent highlight tint */
+  font-weight: 700;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.intro-banner-main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #FFF9EE; /* Main warm canvas off-white text contrast tint */
+  line-height: 1.2;
+  margin-bottom: 45px;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Dual Action Call-To-Action Button Links Group
+   ========================================================================== */
+.intro-banner-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Left Button: Solid Filled Orange Style */
+.btn-quote-solid {
+  font-family: 'Manrope', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EE8F00;
+  color: #1C1C1C; /* Dark text fill for high visibility safety contrast templates */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 16px 36px;
+  border-radius: 4px;
+  border: 1px solid #EE8F00;
+  min-width: 180px;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-quote-solid:hover {
+  background-color: #d47f00; /* Darker orange tone shift on user focus interaction triggers */
+  border-color: #d47f00;
+}
+
+/* Right Button: Transparent Clear Outline Wireframe Style */
+.btn-contact-outline {
+  font-family: 'Manrope', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #FFF9EE;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 16px 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 249, 238, 0.6);
+  min-width: 180px;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-contact-outline:hover {
+  background-color: #FFF9EE;
+  color: #1C1C1C; /* Inverts color fills dynamically on user cursor hover events */
+  border-color: #FFF9EE;
+}
+
+/* ==========================================================================
+   Main Section Layout Wrapper Properties Configuration
+   ========================================================================== */
+.space-contact-section {
+  width: 100%;
+  padding: 50px 0;
+  background-color: white; /* System backing canvas cream shade matching design specs */
+}
+
+.space-contact-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Custom asymmetric proportions side-by-side columns alignment grid */
+  gap: 80px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   Left Side Column Details & Typography Hierarchy 
+   ========================================================================== */
+.contact-uppercase-tag {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #EE8F00; /* Requested vivid corporate orange branding color tone */
+  font-weight: 700;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.contact-main-header {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.contact-sub-paragraph {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  max-width: 460px;
+  margin-bottom: 50px;
+}
+
+/* Meta list structure with deep circular layout backplates */
+.contact-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.meta-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.meta-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #0A4B4B; /* Requested main Deep Teal accent backing circle frame profile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.meta-icon-badge svg {
+  width: 18px;
+  height: 18px;
+  color: #FFF9EE; /* High contrast matching inner asset vector indicators */
+}
+
+.meta-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: #777777;
+  font-weight: 600;
+}
+
+.meta-value {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #1C1C1C;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Right Side Form Container Card Architecture Structure Details
+   ========================================================================== */
+.enquiry-card-form {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 16px; /* Smooth rounded exterior template track box bounds */
+  box-shadow: 0 10px 40px rgba(10, 75, 75, 0.02); /* Faint teal composite drop shadow profile */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Name/Phone input split line */
+.form-input-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Standard Base Form Inputs Configurator Parameters styling classes */
+.form-field-input,
+.form-field-textarea {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  color: #1C1C1C;
+  background-color: #ffffff;
+  border: 1px solid #e0decb; /* Discrete muted layout boundary line profile track */
+  padding: 16px 20px;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.form-field-input::placeholder,
+.form-field-textarea::placeholder {
+  color: #a09e8c;
+  opacity: 0.75;
+}
+
+.form-field-input:focus,
+.form-field-textarea:focus {
+  border-color: #0A4B4B; /* Changes input borders directly to primary corporate teal on focus highlight modes */
+}
+
+/* Standard Selection Dropdown Option Customizing adjustments override layout rules */
+.select-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='%231C1C1C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px;
+  padding-right: 50px;
+}
+
+/* Message Area Resizing constraints lock methods */
+.form-field-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Execution Button Form Submission Anchor Link styling box maps */
+.btn-submit-enquiry {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFF9EE;
+  background-color: #0A4B4B; /* Solid primary deep teal filled form call-to-action layout button */
+  border: 1px solid #0A4B4B;
+  padding: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  margin-top: 10px;
+}
+
+.btn-submit-enquiry:hover {
+  background-color: #073535; /* Deepens focus layer tints seamlessly upon active user cursor highlight triggers */
+  border-color: #073535;
+}
+
+/* ==========================================================================
+   Footer Main Backplate Properties Configuration
+   ========================================================================== */
+.site-footer {
+  background-color: #0A4B4B; /* Core signature dark teal canvas backdrop background color from figma design */
+  padding: 80px 0 0 0; /* Clear baseline bottom padding to align with footer bottom copyright strip rows cleanly */
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  /* Proportional 5-column layout distribution tracks system rules maps out dynamically */
+  grid-template-columns: 1.2fr 0.8fr 1fr 1.1fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   Column 1: Brand details and social icons structure area
+   ========================================================================== */
+.footer-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Classic golden squared identity monogram layout box details */
+.logo-box-badge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #EE8F00; /* Pure requested orange brand color */
+  border: 1px solid #EE8F00;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #EE8F00; /* Main highlighted brand name font color */
+  letter-spacing: 0.5px;
+}
+
+.footer-brand-desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 249, 238, 0.65); /* Soft off-white text contrast matrix path alignment */
+  max-width: 240px;
+  margin-bottom: 35px;
+}
+
+.footer-social-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-follow-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 249, 238, 0.5);
+  font-weight: 500;
+}
+
+.social-links-wrap {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icon-btn {
+  color: #FFF9EE;
+  transition: color 0.3s ease;
+}
+
+.social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon-btn:hover {
+  color: #EE8F00; /* Flips social tracking vectors cleanly into orange values on focus states */
+}
+
+/* ==========================================================================
+   Columns 2, 3, 4: Link Directory Lists Layout Adjustments 
+   ========================================================================== */
+.footer-col-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #EE8F00; /* Golden column uppercase label tags */
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.footer-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-menu-list a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 249, 238, 0.65);
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-menu-list a:hover {
+  color: #FFF9EE; /* Illuminates fully to pure white contrast on hover events */
+  padding-left: 2px;
+}
+
+/* ==========================================================================
+   Column 5: Contact Vector Rows Specifications Components 
+   ========================================================================== */
+.footer-contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: start;
+  gap: 14px;
+}
+
+.contact-vector-icon {
+  width: 16px;
+  height: 16px;
+  color: #EE8F00; /* Keeps clear inline marker points locked as pure orange accents */
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contact-string-value {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 249, 238, 0.65);
+}
+
+/* ==========================================================================
+   Bottom Legal Strip Copyright Footer Alignment Row Bar Block
+   ========================================================================== */
+.footer-bottom-copyright-strip {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 249, 238, 0.08); /* Faint layout divider tracking baseline line overlay */
+  padding: 24px 0;
+  width: 100%;
+}
+
+.copyright-content-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.copyright-content-wrapper p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 249, 238, 0.35); /* Discrete subtle copy text layout density rule */
+  letter-spacing: 0.3px;
+}
+
+
